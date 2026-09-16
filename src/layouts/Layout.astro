@@ -1,0 +1,1434 @@
+﻿ ---
+
+export interface Props {
+
+  title?: string;
+
+  description?: string;
+
+}
+
+const {
+
+  title = "Saeroon Do | Club de Taekwondo",
+
+  description = "Saeroon Do, un nuevo camino a través del Taekwondo."
+
+} = Astro.props;
+
+const navigation = [
+
+  { href: "/", label: "INICIO" },
+
+  { href: "/nosotros", label: "NOSOTROS" },
+
+  { href: "/clases", label: "CLASES" },
+
+  { href: "/horarios", label: "HORARIOS" },
+
+  { href: "/recursos", label: "RECURSOS" },
+
+  { href: "/contacto", label: "CONTACTO" }
+
+];
+
+const currentPath = Astro.url.pathname;
+
+---
+
+<!doctype html>
+
+<html lang="es">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+
+    <meta
+
+      name="description"
+
+      content={description}
+
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+
+      rel="preconnect"
+
+      href="https://fonts.gstatic.com"
+
+      crossorigin
+
+    />
+
+    <link
+
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Rock+Salt&display=swap"
+
+      rel="stylesheet"
+
+    />
+
+  </head>
+
+  <body>
+
+    <!-- =========================================================
+
+         HEADER
+
+    ========================================================== -->
+
+    <header class="site-header">
+
+      <div class="header-inner">
+
+        <a href="/" class="brand">
+
+          <img
+
+            src="/images/logo-saeroon-do.png"
+
+            alt="Logo Saeroon Do"
+
+            class="brand-logo"
+
+          />
+
+          <div class="brand-name">
+
+            <span>SAEROON DO</span>
+
+            <small>새로운도</small>
+
+          </div>
+
+        </a>
+
+        <nav
+
+          class="main-nav"
+
+          aria-label="Navegación principal"
+
+        >
+
+          {navigation.map((item) => (
+
+            <a
+
+              href={item.href}
+
+              class:list={{ active: currentPath === item.href }}
+
+            >
+
+              {item.label}
+
+            </a>
+
+          ))}
+
+        </nav>
+
+        <a
+
+          href="/contacto"
+
+          class="join-button"
+
+        >
+
+          ÚNETE AHORA
+
+        </a>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- =========================================================
+
+         CONTENIDO
+
+    ========================================================== -->
+
+    <slot />
+
+
+
+    <!-- =========================================================
+
+         FOOTER
+
+    ========================================================== -->
+
+    <footer class="site-footer">
+
+      <div class="footer-main">
+
+        <div class="footer-column">
+
+          <p class="footer-title">
+
+            NAVEGACIÓN
+
+          </p>
+
+          <div class="footer-links">
+
+            <a href="/">Inicio</a>
+
+            <a href="/nosotros">Nosotros</a>
+
+            <a href="/clases">Clases</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+          <p class="footer-title">
+
+            EXPLORA
+
+          </p>
+
+          <div class="footer-links">
+
+            <a href="/horarios">Horarios</a>
+
+            <a href="/recursos">Recursos</a>
+
+            <a href="/contacto">Contacto</a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="footer-column footer-path">
+
+          <p class="footer-title">
+
+            CAMINO
+
+          </p>
+
+          <p class="footer-description">
+
+            Club deportivo Saeroon Do · Un nuevo camino
+
+          </p>
+
+          <p class="footer-korean">
+
+            새로운도
+
+          </p>
+
+          <div class="social-links">
+
+            <a
+
+              href="https://www.instagram.com/saeroondo050525/reels/"
+
+              target="_blank"
+
+              rel="noopener noreferrer"
+
+              aria-label="Instagram"
+
+            >
+
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                <rect
+
+                  x="3"
+
+                  y="3"
+
+                  width="18"
+
+                  height="18"
+
+                  rx="5"
+
+                />
+
+                <circle cx="12" cy="12" r="4" />
+
+                <circle
+
+                  cx="17.5"
+
+                  cy="6.5"
+
+                  r="1"
+
+                  class="social-dot"
+
+                />
+
+              </svg>
+
+              <span>Instagram</span>
+
+            </a>
+
+
+
+            <a
+
+              href="https://www.facebook.com/profile.php?id=61576718423538"
+
+              target="_blank"
+
+              rel="noopener noreferrer"
+
+              aria-label="Facebook"
+
+            >
+
+              <svg
+
+                viewBox="0 0 24 24"
+
+                aria-hidden="true"
+
+              >
+
+                <path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v5h4v-5h3l1-4h-4V9c0-.7.3-1 1-1z" />
+
+              </svg>
+
+              <span>Facebook</span>
+
+            </a>
+
+
+
+            <a
+
+              href="https://www.youtube.com/channel/UC293pDRo_rK94cvX9uZ5cbg"
+
+              target="_blank"
+
+              rel="noopener noreferrer"
+
+              aria-label="YouTube"
+
+            >
+
+              <svg
+
+                viewBox="0 0 24 24"
+
+                aria-hidden="true"
+
+              >
+
+                <path d="M21.6 7.2a2.9 2.9 0 0 0-2-2C17.8 4.7 12 4.7 12 4.7s-5.8 0-7.6.5a2.9 2.9 0 0 0-2 2C1.9 9 1.9 12 1.9 12s0 3 .5 4.8a2.9 2.9 0 0 0 2 2c1.8.5 7.6.5 7.6.5s5.8 0 7.6-.5a2.9 2.9 0 0 0 2-2c.5-1.8.5-4.8.5-4.8s0-3-.5-4.8z" />
+
+                <path
+
+                  d="M10 15.5 15 12l-5-3.5v7z"
+
+                  class="youtube-play"
+
+                />
+
+              </svg>
+
+              <span>YouTube</span>
+
+            </a>
+
+
+
+            <a
+
+              href="https://www.tiktok.com/@saeroon.do"
+
+              target="_blank"
+
+              rel="noopener noreferrer"
+
+              aria-label="TikTok"
+
+            >
+
+              <svg
+
+                viewBox="0 0 24 24"
+
+                aria-hidden="true"
+
+              >
+
+                <path d="M15 3c.4 2.4 1.7 4 4 4.4v3.1c-1.7-.1-3-.6-4-1.5v6.7a6.2 6.2 0 1 1-5.4-6.1v3.2a3 3 0 1 0 2.3 2.9V3H15z" />
+
+              </svg>
+
+              <span>TikTok</span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- LOGO INFERIOR -->
+
+      <div class="footer-logo-wrapper">
+
+        <a
+
+          href="/"
+
+          class="footer-logo"
+
+          aria-label="Volver al inicio"
+
+        >
+
+          <img
+
+            src="/images/logo-saeroon-do.png"
+
+            alt="Saeroon Do"
+
+          />
+
+        </a>
+
+      </div>
+
+
+
+      <div class="site-counter" aria-label="Contador de visitas al sitio">
+        <svg
+          class="site-counter-icon"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" />
+          <circle cx="12" cy="12" r="2.7" />
+        </svg>
+
+        <span class="site-counter-label">
+          VISITAS AL SITIO
+        </span>
+
+        <span class="site-counter-separator"></span>
+
+        <strong id="site-visit-count">—</strong>
+      </div>
+
+<div class="footer-bottom">
+
+        <p>
+
+          © 2026 Saeroon Do · Club de Taekwondo
+
+        </p>
+
+      </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+
+         WHATSAPP
+
+    ========================================================== -->
+
+    <a
+
+      href="https://wa.me/573171293995"
+
+      class="whatsapp-button"
+
+      target="_blank"
+
+      rel="noopener noreferrer"
+
+      aria-label="Contactar por WhatsApp"
+
+    >
+
+      <svg
+
+        viewBox="0 0 32 32"
+
+        aria-hidden="true"
+
+      >
+
+        <path
+
+          d="M16 3C8.82 3 3 8.82 3 16c0 2.3.6 4.55 1.73 6.54L3 29l6.62-1.7A12.94 12.94 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm0 23.8c-2.08 0-4.12-.56-5.9-1.62l-.42-.25-3.93 1.01 1.05-3.83-.27-.44A10.74 10.74 0 1 1 16 26.8zm5.9-8.06c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.52-.16-.74.16-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.32-.16-1.35-.5-2.57-1.6-.95-.85-1.59-1.9-1.77-2.22-.18-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.32-1.14 1.11-1.14 2.71s1.17 3.14 1.33 3.36c.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 2.08.13.63-.09 1.9-.78 2.17-1.54.27-.76.27-1.41.19-1.54-.08-.13-.3-.21-.62-.37z"
+
+        />
+
+      </svg>
+
+    </a>
+
+
+
+    <style>
+
+      :global(*) {
+
+        box-sizing: border-box;
+
+      }
+
+      :global(html) {
+
+        scroll-behavior: smooth;
+
+      }
+
+      :global(body) {
+
+        margin: 0;
+
+        padding: 0;
+
+        background: #031215;
+
+        color: white;
+
+        font-family: "Montserrat", sans-serif;
+
+      }
+
+      :global(a) {
+
+        text-decoration: none;
+
+      }
+
+
+
+      /* =========================================================
+
+         HEADER
+
+      ========================================================== */
+
+      .site-header {
+
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        z-index: 1000;
+
+        width: 100%;
+
+        background: #031215;
+
+        border-bottom:
+
+          1px solid rgba(214, 165, 40, 0.16);
+
+        backdrop-filter: blur(12px);
+
+      }
+
+      .header-inner {
+
+        width: min(1350px, 92%);
+
+        min-height: 100px;
+
+        margin: auto;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 35px;
+
+      }
+
+      .brand {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+        flex-shrink: 0;
+
+      }
+
+      .brand-logo {
+
+  width: 60px;
+
+  height: 60px;
+
+  object-fit: contain;
+
+  display: block;
+
+  background: white;
+
+  border: 2px solid #d6a528;
+
+  border-radius: 50%;
+
+  padding: 2px;
+
+  box-sizing: border-box;
+
+}
+
+      .brand-name {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 3px;
+
+      }
+
+      .brand-name span {
+
+        color: #d6a528;
+
+        font-family: "Rock Salt", cursive;
+
+        font-size: 17px;
+
+        font-weight: 400;
+
+        line-height: 1;
+
+        white-space: nowrap;
+
+      }
+
+      .brand-name small {
+
+        color: #edcc70;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 10px;
+
+        font-weight: 600;
+
+        letter-spacing: 3px;
+
+      }
+
+
+
+      /* =========================================================
+
+         NAVEGACIÓN
+
+      ========================================================== */
+
+      .main-nav {
+
+        flex: 1;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 27px;
+
+      }
+
+      .main-nav a {
+
+        color: rgba(255, 255, 255, 0.82);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 14px;
+
+        font-weight: 700;
+
+        letter-spacing: 0.7px;
+
+        transition:
+
+          color 0.25s ease,
+
+          transform 0.25s ease;
+
+      }
+
+      .main-nav a:hover {
+
+        color: #d6a528;
+
+        transform: translateY(-2px);
+
+      }
+
+      .main-nav a.active {
+
+        color: #d6a528;
+
+      }
+
+
+
+      /* =========================================================
+
+         BOTÓN ÚNETE AHORA
+
+      ========================================================== */
+
+      .join-button {
+
+        min-height: 42px;
+
+        padding: 0 19px;
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        background: #d6a528;
+
+        border: 1px solid #d6a528;
+
+        color: #031215;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 10px;
+
+        font-weight: 800;
+
+        letter-spacing: 0.8px;
+
+        transition:
+
+          transform 0.3s ease,
+
+          *background* 0.3s ease,
+
+          border-color 0.3s ease,
+
+          box-shadow 0.3s ease;
+
+      }
+
+      .join-button:hover {
+
+        transform: translateY(-3px);
+
+        background: #edcc70;
+
+        border-color: #edcc70;
+
+        box-shadow:
+
+          0 10px 25px rgba(214, 165, 40, 0.2);
+
+      }
+
+
+
+      /* =========================================================
+
+         FOOTER
+
+      ========================================================== */
+
+      .site-footer {
+
+        background: #020b0d;
+
+        border-top:
+
+          1px solid rgba(214, 165, 40, 0.15);
+
+        padding: 65px 0 25px;
+
+      }
+
+      .footer-main {
+
+        width: min(1200px, 90%);
+
+        margin: auto;
+
+        display: grid;
+
+        grid-template-columns:
+
+          1fr
+
+          1fr
+
+          1.4fr;
+
+        gap: 50px;
+
+      }
+
+      .footer-title {
+
+        margin: 0 0 17px;
+
+        color: #d6a528;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 10px;
+
+        font-weight: 800;
+
+        letter-spacing: 2px;
+
+      }
+
+      .footer-links {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 9px;
+
+      }
+
+      .footer-links a {
+
+        color: rgba(255, 255, 255, 0.55);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 12px;
+
+        font-weight: 500;
+
+        transition:
+
+          color 0.25s ease,
+
+          transform 0.25s ease;
+
+      }
+
+      .footer-links a:hover {
+
+        color: #edcc70;
+
+        transform: translateX(3px);
+
+      }
+
+      .footer-description {
+
+        margin: 0;
+
+        color: rgba(255, 255, 255, 0.65);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+
+      }
+
+      .footer-korean {
+
+        margin: 8px 0 18px;
+
+        color: #d6a528;
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 11px;
+
+        font-weight: 600;
+
+        letter-spacing: 3px;
+
+      }
+
+
+
+      /* =========================================================
+
+         REDES SOCIALES
+
+      ========================================================== */
+
+      .social-links {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 16px;
+
+      }
+
+      .social-links a {
+
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 6px;
+
+        color: rgba(255, 255, 255, 0.48);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 10px;
+
+        font-weight: 700;
+
+        transition:
+
+          color 0.25s ease,
+
+          transform 0.25s ease;
+
+      }
+
+      .social-links a:hover {
+
+        color: #d6a528;
+
+        transform: translateY(-2px);
+
+      }
+
+      .social-links svg {
+
+        width: 17px;
+
+        height: 17px;
+
+        fill: none;
+
+        stroke: currentColor;
+
+        stroke-width: 1.7;
+
+        stroke-linecap: round;
+
+        stroke-linejoin: round;
+
+      }
+
+      .social-links svg path {
+
+        fill: currentColor;
+
+        stroke: none;
+
+      }
+
+      .social-links svg .youtube-play {
+
+        fill: #020b0d;
+
+      }
+
+      .social-links svg .social-dot {
+
+        fill: currentColor;
+
+        stroke: none;
+
+      }
+
+
+
+      /* =========================================================
+
+         LOGO INFERIOR
+
+      ========================================================== */
+
+      .footer-logo-wrapper {
+
+        display: flex;
+
+        justify-content: center;
+
+        margin: 50px 0 35px;
+
+      }
+
+      .footer-logo {
+
+        width: 92px;
+
+        height: 92px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        background: white;
+
+        border:
+
+          2px solid #d6a528;
+
+        border-radius: 50%;
+
+        overflow: hidden;
+
+        transition:
+
+          transform 0.3s ease,
+
+          box-shadow 0.3s ease;
+
+      }
+
+      .footer-logo:hover {
+
+        transform: translateY(-4px);
+
+        box-shadow:
+
+          0 12px 28px rgba(0, 0, 0, 0.35),
+
+          0 0 25px rgba(214, 165, 40, 0.18);
+
+      }
+
+      .footer-logo img {
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: contain;
+
+        display: block;
+
+      }
+
+
+
+      /* =========================================================
+
+         COPYRIGHT
+
+      ========================================================== */
+
+      /* =========================================================
+         CONTADOR DE VISITAS
+      ========================================================== */
+      .site-counter {
+        width: fit-content;
+        margin: 0 auto 25px;
+        padding: 9px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+
+        background: rgba(214, 165, 40, 0.035);
+        border: 1px solid rgba(214, 165, 40, 0.28);
+        border-radius: 30px;
+
+        color: rgba(255, 255, 255, 0.58);
+        font-family: "Montserrat", sans-serif;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 1.4px;
+
+        box-shadow:
+          0 0 18px rgba(214, 165, 40, 0.04);
+
+        transition:
+          border-color 0.3s ease,
+          box-shadow 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      .site-counter:hover {
+        transform: translateY(-2px);
+        border-color: rgba(214, 165, 40, 0.55);
+        box-shadow:
+          0 8px 25px rgba(0, 0, 0, 0.22),
+          0 0 22px rgba(214, 165, 40, 0.10);
+      }
+
+      .site-counter-icon {
+        width: 17px;
+        height: 17px;
+        flex-shrink: 0;
+        fill: none;
+        stroke: #d6a528;
+        stroke-width: 1.6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .site-counter-label {
+        color: rgba(255, 255, 255, 0.58);
+        white-space: nowrap;
+      }
+
+      .site-counter-separator {
+        width: 1px;
+        height: 13px;
+        background: rgba(214, 165, 40, 0.35);
+      }
+
+      .site-counter strong {
+        min-width: 28px;
+        color: #d6a528;
+        font-family: "Montserrat", sans-serif;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+
+      /* =========================================================
+         COPYRIGHT
+      ========================================================== */
+      .footer-bottom {
+
+        width: min(1200px, 90%);
+
+        margin: auto;
+
+        padding-top: 20px;
+
+        border-top:
+
+          1px solid rgba(255, 255, 255, 0.06);
+
+        text-align: center;
+
+      }
+
+      .footer-bottom p {
+
+        margin: 0;
+
+        color: rgba(255, 255, 255, 0.3);
+
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 10px;
+
+      }
+
+
+
+      /* =========================================================
+
+         WHATSAPP
+
+      ========================================================== */
+
+      .whatsapp-button {
+
+        position: fixed;
+
+        right: 24px;
+
+        bottom: 24px;
+
+        z-index: 1100;
+
+        width: 54px;
+
+        height: 54px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        background: #d6a528;
+
+        border:
+
+          1px solid #edcc70;
+
+        border-radius: 50%;
+
+        box-shadow:
+
+          0 8px 25px rgba(0, 0, 0, 0.35);
+
+        transition:
+
+          transform 0.3s ease,
+
+          box-shadow 0.3s ease;
+
+      }
+
+      .whatsapp-button:hover {
+
+        transform:
+
+          translateY(-4px)
+
+          scale(1.05);
+
+        box-shadow:
+
+          0 12px 30px rgba(0, 0, 0, 0.4),
+
+          0 0 25px rgba(214, 165, 40, 0.2);
+
+      }
+
+      .whatsapp-button svg {
+
+        width: 29px;
+
+        height: 29px;
+
+        fill: #031215;
+
+      }
+
+
+
+      /* =========================================================
+
+         TABLET
+
+      ========================================================== */
+
+      @media (max-width: 1050px) {
+
+        .header-inner {
+
+          gap: 20px;
+
+        }
+
+        .main-nav {
+
+          gap: 15px;
+
+        }
+
+        .main-nav a {
+
+          font-size: 11px;
+
+        }
+
+        .brand-name span {
+
+          font-size: 13px;
+
+        }
+
+        .join-button {
+
+          padding: 0 13px;
+
+        }
+
+      }
+
+
+
+      /* =========================================================
+
+         MOBILE
+
+      ========================================================== */
+
+      @media (max-width: 800px) {
+
+        .site-header {
+
+          position: absolute;
+
+        }
+
+        .header-inner {
+
+          min-height: auto;
+
+          padding: 15px 0;
+
+          flex-wrap: wrap;
+
+          justify-content: center;
+
+        }
+
+        .brand {
+
+          width: 100%;
+
+          justify-content: center;
+
+        }
+
+        .main-nav {
+
+          order: 3;
+
+          width: 100%;
+
+          flex-wrap: wrap;
+
+          gap: 12px 17px;
+
+        }
+
+        .main-nav a {
+
+          font-size: 10px;
+
+        }
+
+        .join-button {
+
+          display: none;
+
+        }
+
+        .footer-main {
+
+          grid-template-columns: 1fr;
+
+          text-align: center;
+
+          gap: 35px;
+
+        }
+
+        .footer-links {
+
+          align-items: center;
+
+        }
+
+        .social-links {
+
+          justify-content: center;
+
+        }
+
+        .whatsapp-button {
+
+          right: 18px;
+
+          bottom: 18px;
+
+        }
+
+      }
+
+    </style>
+
+
+
+    <!-- =========================================================
+         CONTADOR DE VISITAS
+    ========================================================== -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"
+      defer
+    ></script>
+
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", function () {
+        const visitCount = document.getElementById("site-visit-count");
+
+        if (!visitCount || typeof Counter === "undefined") {
+          return;
+        }
+
+        const counter = new Counter({
+          workspace: "informacion-club-deportivo-saeroon-dos-team-5540"
+        });
+
+        const sessionKey = "saeroon-do-visit-counted";
+
+        async function updateVisitCount() {
+          try {
+            let result;
+
+            if (!sessionStorage.getItem(sessionKey)) {
+              result = await counter.up("saeroon-do");
+              sessionStorage.setItem(sessionKey, "true");
+            } else {
+              result = await counter.get("saeroon-do");
+            }
+
+            const currentValue =
+              result &&
+              result.data &&
+              result.data.up_count !== undefined
+                ? result.data.up_count
+                : result && result.value !== undefined
+                  ? result.value
+                  : undefined;
+
+            if (currentValue !== undefined) {
+              visitCount.textContent =
+                Number(currentValue).toLocaleString("es-CO");
+            }
+          } catch (error) {
+            console.error("Error al cargar el contador de visitas:", error);
+            visitCount.textContent = "—";
+          }
+        }
+
+        updateVisitCount();
+      });
+    </script>
+
+  </body>
+
+</html>

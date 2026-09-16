@@ -1,0 +1,73 @@
+---
+/* Componente Footer Reutilizable */
+---
+
+<footer>
+  <div class="footer-content">
+    <div>
+      <strong>SAEROON DO</strong>
+      <p>Más que un arte marcial, un camino para la vida.</p>
+    </div>
+    <div>
+      <p>CLUB DE TAEKWONDO</p>
+      <small>© 2026 Saeroon Do</small>
+    </div>
+  </div>
+</footer>
+
+<style>
+footer { 
+  background: #020b0d; 
+  padding: 45px 0; 
+  border-top: 1px solid rgba(214, 165, 40, 0.15);
+}
+
+.footer-content {
+  width: min(1250px, 90%); 
+  margin: auto; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  gap: 40px;
+}
+
+.footer-content strong { 
+  color: white; 
+  font-family: "Rock Salt", cursive; 
+  font-size: 18px; 
+  font-weight: 400; 
+}
+
+.footer-content p { 
+  margin: 10px 0 0; 
+  color: rgba(255,255,255,.5); 
+  font-size: 13px; 
+  line-height: 1.7; 
+}
+
+.footer-content > div:last-child { 
+  text-align: right; 
+}
+
+.footer-content > div:last-child p { 
+  margin: 0 0 7px; 
+  color: #d6a528; 
+  font-family: "Rock Salt", cursive; 
+  font-size: 10px; 
+  letter-spacing: 1.5px; 
+}
+
+.footer-content small { 
+  color: rgba(255,255,255,.38); 
+}
+
+@media (max-width: 750px) {
+  .footer-content { 
+    flex-direction: column; 
+    text-align: center; 
+  }
+  .footer-content > div:last-child { 
+    text-align: center; 
+  }
+}
+</style>

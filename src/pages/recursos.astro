@@ -1,0 +1,1931 @@
+ ---
+
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout
+
+  title="Recursos | Saeroon Do"
+
+  description="Acceso privado a material de estudio, documentos y memorias del Club Saeroon Do.">
+
+  <main>
+
+    <!-- =========================================================
+
+         HERO
+
+    ========================================================== -->
+
+    <section class="hero-page">
+
+      <div class="hero-grid">
+
+        <div class="hero-text-content">
+
+          <p class="section-label">SAEROON DO</p>
+
+          <div class="hero-korean">새로운도</div>
+
+          <h1>
+
+            MATERIAL DE ESTUDIO,
+
+            <span>Y GALERÍA PRIVADA</span>
+
+          </h1>
+
+          <p class="hero-description">
+
+            Espacio exclusivo para deportistas y familias Saeroon Do.
+
+            Encuentra guías técnicas, reglamentos y memorias fotográficas
+
+            para continuar tu camino dentro y fuera del dojang.
+
+          </p>
+
+        </div>
+
+        <div class="hero-image-wrapper">
+
+          <img
+
+            src="/images/taekwondo8.jpg"
+
+            alt="Entrenamiento de Taekwondo Saeroon Do"
+
+            class="hero-interactive-img"
+
+          />
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+
+         RECURSOS PRIVADOS
+
+    ========================================================== -->
+
+    <section class="resources">
+
+      <div class="section-inner">
+
+        <p class="section-label bold-label">
+
+          CONTENIDOS DISPONIBLES
+
+        </p>
+
+        <h2>
+
+          SELECCIONA UNA <br>
+
+          <span>CATEGORÍA</span>
+
+        </h2>
+
+        <p class="intro-text">
+
+          Ingresa la contraseña asignada por la academia para abrir
+
+          la carpeta correspondiente en Google Drive.
+
+        </p>
+
+
+
+        <div class="resources-grid">
+
+          <!-- =====================================================
+
+               CARD 01 - TÉCNICA
+
+          ====================================================== -->
+
+          <article class="resource-card">
+
+            <div class="card-top">
+
+              <span class="card-number">01</span>
+
+              <div class="card-icon">
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                  <path
+
+                    d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+
+                    fill="none"
+
+                    stroke="currentColor"
+
+                    stroke-width="1.8"
+
+                  />
+
+                </svg>
+
+              </div>
+
+            </div>
+
+            <div class="card-content">
+
+              <p class="card-korean">기술 · 품새</p>
+
+              <h3>TÉCNICAS Y POOMSAES</h3>
+
+              <p>
+
+                Videos explicativos, guías teóricas de examen y
+
+                material audiovisual de apoyo según el cinturón.
+
+              </p>
+
+            </div>
+
+            <button
+
+              class="resource-button"
+
+              onclick="accederCarpeta('TECNICA', 'https://drive.google.com/drive/folders/1UcfUTYIC1kL2LpSfFyTaZ3RNGPCgFu3Y?usp=sharing')">
+
+              <strong>ACCEDER A CARPETA</strong>
+
+              <span>→</span>
+
+            </button>
+
+            <div class="card-line"></div>
+
+          </article>
+
+
+
+          <!-- =====================================================
+
+               CARD 02 - TEORÍA
+
+          ====================================================== -->
+
+          <article class="resource-card">
+
+            <div class="card-top">
+
+              <span class="card-number">02</span>
+
+              <div class="card-icon">
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                  <path
+
+                    d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+
+                    fill="none"
+
+                    stroke="currentColor"
+
+                    stroke-width="1.8"
+
+                  />
+
+                </svg>
+
+              </div>
+
+            </div>
+
+            <div class="card-content">
+
+              <p class="card-korean">규정 · 이론</p>
+
+              <h3>REGLAMENTO Y TEORÍA</h3>
+
+              <p>
+
+                Manuales de juzgamiento, vocabulario en coreano,
+
+                historia del Taekwondo y documentos informativos.
+
+              </p>
+
+            </div>
+
+            <button
+
+              class="resource-button"
+
+              onclick="accederCarpeta('TEORIA', 'https://drive.google.com/drive/folders/13-aHezid3oa3XTxYJcaDlx2LMexG4k-r?usp=sharing')">
+
+              <strong>ACCEDER A CARPETA</strong>
+
+              <span>→</span>
+
+            </button>
+
+            <div class="card-line"></div>
+
+          </article>
+
+
+
+          <!-- =====================================================
+
+               CARD 03 - FOTOS
+
+          ====================================================== -->
+
+          <article class="resource-card">
+
+            <div class="card-top">
+
+              <span class="card-number">03</span>
+
+              <div class="card-icon">
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                  <path
+
+                    d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+
+                    fill="none"
+
+                    stroke="currentColor"
+
+                    stroke-width="1.8"
+
+                  />
+
+                </svg>
+
+              </div>
+
+            </div>
+
+            <div class="card-content">
+
+              <p class="card-korean">사진 · 추억</p>
+
+              <h3>FOTOS Y MEMORIAS</h3>
+
+              <p>
+
+                Álbumes fotográficos de festivales, exámenes de
+
+                ascenso, seminarios y competencias del club.
+
+              </p>
+
+            </div>
+
+            <button
+
+              class="resource-button"
+
+              onclick="accederCarpeta('FOTOS', 'https://drive.google.com/drive/folders/10599FPj-c5Ks9MBi8OX9mCLGJp2e5iiL?usp=sharing')">
+
+              <strong>ACCEDER A CARPETA</strong>
+
+              <span>→</span>
+
+            </button>
+
+            <div class="card-line"></div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+
+         NOTICIAS Y NOVEDADES
+
+    ========================================================== -->
+
+    <section class="news-section">
+
+      <div class="section-inner">
+
+        <p class="section-label bold-label">
+
+          NOTICIAS Y NOVEDADES
+
+        </p>
+
+        <h2>
+
+          ÚLTIMAS <br>
+
+          <span>ACTUALIZACIONES</span>
+
+        </h2>
+
+
+
+        <div class="news-grid">
+
+          <article class="news-card">
+
+            <div class="news-header">
+
+              <span class="news-date">
+
+                13 DE SEPTIEMBRE, 2026
+
+              </span>
+
+              <span class="news-badge">
+
+                CAPACITACIÓN DOCENTE
+
+              </span>
+
+            </div>
+
+
+
+            <div class="news-content">
+
+              <p class="news-korean">
+
+                사룬도 · 계속 배우는 길
+
+              </p>
+
+              <h3>
+
+                Encuentro y masterclass:
+
+                Metodología GGTF para la enseñanza del Taekwondo
+
+              </h3>
+
+              <p class="news-description">
+
+                Nos complace anunciar que el pasado
+
+                <strong>13 de septiembre</strong> nuestros profesores
+
+                asistieron a una jornada intensiva de capacitación en el
+
+                <em>
+
+                  "Encuentro y masterclass (metodología GGTF para la
+
+                  enseñanza del Taekwondo)"
+
+                </em>.
+
+                Reafirmamos nuestro compromiso con la excelencia
+
+                metodológica y la constante actualización pedagógica
+
+                en beneficio de todos nuestros estudiantes.
+
+              </p>
+
+            </div>
+
+
+
+            <div class="news-gallery">
+
+      <div class="photo-placeholder">
+        <img
+          src="/images/GTTF-Capacitacion.jpeg"
+          alt="Encuentro y masterclass: Metodología GGTF para la enseñanza del Taekwondo"
+          style="width: 100%; height: 100%; object-fit: cover; display: block;"
+        />
+      </div>
+
+    </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+
+         CIERRE
+
+    ========================================================== -->
+
+    <section class="closing-section">
+
+      <div class="closing-inner">
+
+        <p class="section-label">
+
+          SAEROON DO
+
+        </p>
+
+        <h2>
+
+          APRENDER, <br>
+
+          <span>CRECER Y RECORDAR</span>
+
+        </h2>
+
+        <p>
+
+          Nuestro camino también se construye con conocimiento,
+
+          disciplina y cada experiencia compartida.
+
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+</Layout>
+
+
+
+<!-- =========================================================
+
+     VALIDACIÓN DE CONTRASEÑAS
+
+\========================================================== -->
+
+<script is:inline>
+
+  const CLAVES = {
+
+    TECNICA: "saeroon2026",
+
+    TEORIA: "teoria2026",
+
+    FOTOS: "familiasaeroon"
+
+  };
+
+  function accederCarpeta(categoria, urlDrive) {
+
+    const claveIngresada = prompt(
+
+      "Ingresa la contraseña de acceso:"
+
+    );
+
+    if (claveIngresada === null) return;
+
+    if (
+
+      claveIngresada.trim() === CLAVES[categoria]
+
+    ) {
+
+      window.open(
+
+        urlDrive,
+
+        "_blank"
+
+      );
+
+    } else {
+
+      alert(
+
+        "Contraseña incorrecta. Por favor consulta con la dirección del club."
+
+      );
+
+    }
+
+  }
+
+</script>
+
+
+
+<style>
+
+  /* =========================================================
+
+     VARIABLES
+
+  ========================================================== */
+
+  :global(*) {
+
+    box-sizing: border-box;
+
+  }
+
+  :global(html) {
+
+    scroll-behavior: smooth;
+
+  }
+
+  :global(body) {
+
+    margin: 0;
+
+    background: #031215;
+
+    color: white;
+
+    font-family: "Montserrat", sans-serif;
+
+  }
+
+  :global(a) {
+
+    text-decoration: none;
+
+  }
+
+
+
+  /* =========================================================
+
+     HERO
+
+  ========================================================== */
+
+  .hero-page {
+
+    padding: 155px 0 80px;
+
+    background:
+
+      radial-gradient(
+
+        circle at 15% 10%,
+
+        rgba(214, 165, 40, 0.09),
+
+        transparent 42%
+
+      ),
+
+      #031215;
+
+  }
+
+  .hero-grid {
+
+    width: min(1250px, 90%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 65px;
+
+    align-items: center;
+
+  }
+
+  .hero-text-content {
+
+    text-align: left;
+
+  }
+
+  .section-label {
+
+    margin: 0 0 12px;
+
+    color: #d6a528;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+
+  }
+
+  .hero-korean {
+
+    margin: 5px 0 14px;
+
+    color: #edcc70;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    opacity: 0.9;
+
+  }
+
+  .hero-text-content h1 {
+
+    margin: 0 0 22px;
+
+    color: white;
+
+    font-family: "Rock Salt", cursive;
+
+    font-size: clamp(27px, 3vw, 43px);
+
+    font-weight: 400;
+
+    line-height: 1.35;
+
+  }
+
+  .hero-text-content h1 span {
+
+    display: block;
+
+    color: #d6a528;
+
+  }
+
+  .hero-description {
+
+    max-width: 600px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+  }
+
+
+
+  /* =========================================================
+
+     HERO IMAGEN
+
+  ========================================================== */
+
+ .hero-image-wrapper {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+
+  max-width: 520px;
+
+  margin: 0 auto;
+
+}
+
+.hero-image-wrapper::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+
+    linear-gradient(
+
+      to right,
+
+      #031215 0%,
+
+      rgba(3, 18, 21, 0.12) 18%,
+
+      rgba(3, 18, 21, 0) 45%,
+
+      rgba(3, 18, 21, 0.08) 72%,
+
+      #031215 100%
+
+    ),
+
+    linear-gradient(
+
+      to bottom,
+
+      #031215 0%,
+
+      rgba(3, 18, 21, 0) 15%,
+
+      rgba(3, 18, 21, 0) 82%,
+
+      #031215 100%
+
+    );
+
+  pointer-events: none;
+
+  z-index: 2;
+
+}
+
+.hero-interactive-img {
+
+  display: block;
+
+  width: 100%;
+
+  max-width: 520px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  border: none;
+
+  box-shadow: none;
+
+  filter:
+
+    brightness(0.88)
+
+    contrast(1.05)
+
+    drop-shadow(0 20px 35px rgba(0, 0, 0, 0.35));
+
+  -webkit-mask-image:
+
+    linear-gradient(
+
+      to right,
+
+      transparent 0%,
+
+      black 12%,
+
+      black 88%,
+
+      transparent 100%
+
+    ),
+
+    linear-gradient(
+
+      to bottom,
+
+      transparent 0%,
+
+      black 10%,
+
+      black 90%,
+
+      transparent 100%
+
+    );
+
+  -webkit-mask-composite: source-in;
+
+  mask-image:
+
+    linear-gradient(
+
+      to right,
+
+      transparent 0%,
+
+      black 12%,
+
+      black 88%,
+
+      transparent 100%
+
+    ),
+
+    linear-gradient(
+
+      to bottom,
+
+      transparent 0%,
+
+      black 10%,
+
+      black 90%,
+
+      transparent 100%
+
+    );
+
+  mask-composite: intersect;
+
+  transition:
+
+    transform 0.6s ease,
+
+    filter 0.6s ease;
+
+}
+
+.hero-image-wrapper:hover .hero-interactive-img {
+
+  transform: scale(1.035);
+
+  filter:
+
+    brightness(1)
+
+    contrast(1.08)
+
+    drop-shadow(0 24px 40px rgba(0, 0, 0, 0.40));
+
+}
+
+
+
+  /* =========================================================
+
+     SECCIONES GENERALES
+
+  ========================================================== */
+
+  .section-inner {
+
+    width: min(1250px, 90%);
+
+    margin: auto;
+
+  }
+
+
+
+  /* =========================================================
+
+     RECURSOS
+
+  ========================================================== */
+
+  .resources {
+
+    padding: 70px 0 90px;
+
+    background:
+
+      linear-gradient(
+
+        180deg,
+
+        #031215 0%,
+
+        #051b1f 100%
+
+      );
+
+  }
+
+  .bold-label {
+
+    text-shadow:
+
+      0 0 14px rgba(214, 165, 40, 0.35);
+
+  }
+
+  .resources h2,
+
+  .news-section h2,
+
+  .closing-section h2 {
+
+    margin: 0 0 17px;
+
+    color: white;
+
+    font-family: "Rock Salt", cursive;
+
+    font-size: clamp(24px, 2.5vw, 31px);
+
+    font-weight: 400;
+
+    line-height: 1.4;
+
+  }
+
+  .resources h2 span,
+
+  .news-section h2 span,
+
+  .closing-section h2 span {
+
+    color: #d6a528;
+
+  }
+
+  .intro-text {
+
+    max-width: 700px;
+
+    margin: 0 0 42px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+  }
+
+
+
+  /* =========================================================
+
+     GRID DE RECURSOS
+
+  ========================================================== */
+
+  .resources-grid {
+
+    display: grid;
+
+    grid-template-columns:
+
+      repeat(3, 1fr);
+
+    gap: 24px;
+
+    align-items: stretch;
+
+  }
+
+
+
+  /* =========================================================
+
+     RESOURCE CARD
+
+  ========================================================== */
+
+  .resource-card {
+
+    position: relative;
+
+    min-height: 390px;
+
+    padding: 28px 25px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+
+      linear-gradient(
+
+        145deg,
+
+        rgba(8, 35, 41, 0.96),
+
+        rgba(5, 27, 31, 0.9)
+
+      );
+
+    border: 1px solid rgba(214, 165, 40, 0.32);
+
+    overflow: hidden;
+
+    transition:
+
+      transform 0.35s ease,
+
+      border-color 0.35s ease,
+
+      box-shadow 0.35s ease,
+
+      background 0.35s ease;
+
+  }
+
+  .resource-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 0;
+
+    height: 2px;
+
+    background: #d6a528;
+
+    transition: width 0.4s ease;
+
+  }
+
+  .resource-card:hover {
+
+    transform:
+
+      translateY(-8px)
+
+      scale(1.015);
+
+    border-color: #d6a528;
+
+    background:
+
+      linear-gradient(
+
+        145deg,
+
+        rgba(11, 43, 49, 0.98),
+
+        rgba(5, 27, 31, 0.96)
+
+      );
+
+    box-shadow:
+
+      0 18px 38px rgba(0, 0, 0, 0.38),
+
+      0 0 28px rgba(214, 165, 40, 0.13);
+
+  }
+
+  .resource-card:hover::before {
+
+    width: 100%;
+
+  }
+
+
+
+  /* =========================================================
+
+     CARD TOP
+
+  ========================================================== */
+
+  .card-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 24px;
+
+  }
+
+  .card-number {
+
+    color: #d6a528;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    transition:
+
+      transform 0.35s ease,
+
+      letter-spacing 0.35s ease;
+
+  }
+
+  .resource-card:hover .card-number {
+
+    transform: translateX(4px);
+
+    letter-spacing: 3px;
+
+  }
+
+
+
+  /* =========================================================
+
+     ICONO
+
+  ========================================================== */
+
+  .card-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #d6a528;
+
+    background:
+
+      rgba(214, 165, 40, 0.07);
+
+    border: 1px solid
+
+      rgba(214, 165, 40, 0.25);
+
+    transition:
+
+      transform 0.35s ease,
+
+      background 0.35s ease,
+
+      box-shadow 0.35s ease;
+
+  }
+
+  .resource-card:hover .card-icon {
+
+    transform:
+
+      translateY(-3px)
+
+      scale(1.06);
+
+    background:
+
+      rgba(214, 165, 40, 0.12);
+
+    box-shadow:
+
+      0 0 18px rgba(214, 165, 40, 0.14);
+
+  }
+
+  .card-icon svg {
+
+    width: 25px;
+
+    height: 25px;
+
+  }
+
+
+
+  /* =========================================================
+
+     CARD CONTENT
+
+  ========================================================== */
+
+  .card-content {
+
+    flex: 1;
+
+  }
+
+  .card-korean {
+
+    margin: 0 0 10px;
+
+    color: #edcc70;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+  }
+
+  .resource-card h3 {
+
+    margin: 0 0 14px;
+
+    color: white;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    line-height: 1.4;
+
+  }
+
+  .resource-card p:not(.card-korean) {
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+
+  }
+
+
+
+  /* =========================================================
+
+     BOTÓN RECURSO
+
+  ========================================================== */
+
+  .resource-button {
+
+    width: 100%;
+
+    min-height: 48px;
+
+    margin-top: 25px;
+
+    padding: 0 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border: 1px solid #d6a528;
+
+    background: #d6a528;
+
+    color: #031215;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.7px;
+
+    cursor: pointer;
+
+    transition:
+
+      transform 0.3s ease,
+
+      background 0.3s ease,
+
+      box-shadow 0.3s ease;
+
+  }
+
+  .resource-button:hover {
+
+    transform: translateY(-3px);
+
+    background: #edcc70;
+
+    border-color: #edcc70;
+
+    box-shadow:
+
+      0 10px 25px
+
+      rgba(214, 165, 40, 0.22);
+
+  }
+
+  .resource-button span {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 20px;
+
+    transition:
+
+      transform 0.3s ease;
+
+  }
+
+  .resource-button:hover span {
+
+    transform: translateX(5px);
+
+  }
+
+
+
+  /* =========================================================
+
+     LÍNEA INFERIOR DE LA TARJETA
+
+  ========================================================== */
+
+  .card-line {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 0;
+
+    height: 2px;
+
+    background: #d6a528;
+
+    transition: width 0.4s ease;
+
+  }
+
+  .resource-card:hover .card-line {
+
+    width: 100%;
+
+  }
+
+
+
+  /* =========================================================
+
+     NOTICIAS
+
+  ========================================================== */
+
+  .news-section {
+
+    padding: 90px 0 100px;
+
+    background: #031215;
+
+    border-top:
+
+      1px solid
+
+      rgba(214, 165, 40, 0.15);
+
+  }
+
+  .news-grid {
+
+    margin-top: 35px;
+
+  }
+
+  .news-card {
+
+    position: relative;
+
+    padding: 36px 32px;
+
+    background:
+
+      linear-gradient(
+
+        145deg,
+
+        rgba(8, 35, 41, 0.95),
+
+        rgba(5, 27, 31, 0.9)
+
+      );
+
+    border: 1px solid
+
+      rgba(214, 165, 40, 0.28);
+
+    transition:
+
+      transform 0.35s ease,
+
+      border-color 0.35s ease,
+
+      box-shadow 0.35s ease;
+
+  }
+
+  .news-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color:
+
+      rgba(214, 165, 40, 0.65);
+
+    box-shadow:
+
+      0 18px 40px rgba(0, 0, 0, 0.35),
+
+      0 0 25px rgba(214, 165, 40, 0.08);
+
+  }
+
+
+
+  /* =========================================================
+
+     NEWS HEADER
+
+  ========================================================== */
+
+  .news-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 22px;
+
+  }
+
+  .news-date {
+
+    color: #d6a528;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+  }
+
+  .news-badge {
+
+    padding: 6px 12px;
+
+    color: #d6a528;
+
+    background:
+
+      rgba(214, 165, 40, 0.08);
+
+    border: 1px solid
+
+      rgba(214, 165, 40, 0.3);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+  }
+
+
+
+  /* =========================================================
+
+     NEWS CONTENT
+
+  ========================================================== */
+
+  .news-korean {
+
+    margin: 0 0 9px;
+
+    color: #edcc70;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+  }
+
+  .news-card h3 {
+
+    max-width: 900px;
+
+    margin: 0 0 17px;
+
+    color: white;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    line-height: 1.5;
+
+  }
+
+  .news-description {
+
+    max-width: 950px;
+
+    margin: 0 0 32px;
+
+    color:
+
+      rgba(255, 255, 255, 0.76);
+
+    font-size: 14px;
+
+    line-height: 1.85;
+
+  }
+
+  .news-description strong {
+
+    color: #d6a528;
+
+  }
+
+  .news-description em {
+
+    color: rgba(255, 255, 255, 0.9);
+
+  }
+
+
+
+  /* =========================================================
+
+     GALERÍA DE NOTICIA
+
+  ========================================================== */
+
+  .news-gallery {
+
+    display: grid;
+
+    grid-template-columns:
+
+      repeat(3, 1fr);
+
+    gap: 18px;
+
+  }
+
+  .photo-placeholder {
+
+    position: relative;
+
+    aspect-ratio: 16 / 10;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 20px;
+
+    color:
+
+      rgba(214, 165, 40, 0.65);
+
+    background:
+
+      rgba(3, 18, 21, 0.6);
+
+    border:
+
+      1px dashed
+
+      rgba(214, 165, 40, 0.3);
+
+    text-align: center;
+
+    transition:
+
+      transform 0.3s ease,
+
+      border-color 0.3s ease,
+
+      background 0.3s ease,
+
+      color 0.3s ease;
+
+  }
+
+  .photo-placeholder:hover {
+
+    transform: translateY(-4px);
+
+    color: #d6a528;
+
+    border-color: #d6a528;
+
+    background:
+
+      rgba(214, 165, 40, 0.04);
+
+  }
+
+  .placeholder-icon {
+
+    width: 44px;
+
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+      rgba(214, 165, 40, 0.07);
+
+    border:
+
+      1px solid
+
+      rgba(214, 165, 40, 0.2);
+
+    transition:
+
+      transform 0.3s ease;
+
+  }
+
+  .photo-placeholder:hover .placeholder-icon {
+
+    transform: scale(1.08);
+
+  }
+
+  .placeholder-icon svg {
+
+    width: 23px;
+
+    height: 23px;
+
+  }
+
+  .photo-placeholder span {
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+  }
+
+
+
+  /* =========================================================
+
+     CIERRE
+
+  ========================================================== */
+
+  .closing-section {
+
+    padding: 70px 0 100px;
+
+    background:
+
+      radial-gradient(
+
+        circle at center,
+
+        rgba(214, 165, 40, 0.07),
+
+        transparent 55%
+
+      ),
+
+      #051b1f;
+
+    text-align: center;
+
+  }
+
+  .closing-inner {
+
+    width: min(700px, 90%);
+
+    margin: auto;
+
+  }
+
+  .closing-section h2 {
+
+    margin-bottom: 18px;
+
+  }
+
+  .closing-section p:not(.section-label) {
+
+    margin: 0;
+
+    color:
+
+      rgba(255, 255, 255, 0.68);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+  }
+
+
+
+  /* =========================================================
+
+     TABLET
+
+  ========================================================== */
+
+  @media (max-width: 1000px) {
+
+    .hero-grid {
+
+      grid-template-columns: 1fr;
+
+      gap: 40px;
+
+    }
+
+    .hero-image-wrapper {
+
+      max-width: 650px;
+
+    }
+
+    .resources-grid {
+
+      grid-template-columns:
+
+        repeat(2, 1fr);
+
+    }
+
+  }
+
+
+
+  /* =========================================================
+
+     MÓVIL
+
+  ========================================================== */
+
+  @media (max-width: 700px) {
+
+    .hero-page {
+
+      padding: 135px 0 60px;
+
+    }
+
+    .hero-grid {
+
+      width: 88%;
+
+    }
+
+    .hero-text-content h1 {
+
+      font-size: 25px;
+
+    }
+
+    .hero-description {
+
+      font-size: 13px;
+
+    }
+
+.hero-interactive-img {
+
+  height: auto;
+
+  max-width: 100%;
+
+}
+
+    .resources {
+
+      padding: 60px 0 70px;
+
+    }
+
+    .section-inner {
+
+      width: 88%;
+
+    }
+
+    .resources-grid {
+
+      grid-template-columns: 1fr;
+
+      gap: 20px;
+
+    }
+
+    .resource-card {
+
+      min-height: 370px;
+
+    }
+
+    .resources h2,
+
+    .news-section h2,
+
+    .closing-section h2 {
+
+      font-size: 22px;
+
+    }
+
+    .news-section {
+
+      padding: 70px 0 80px;
+
+    }
+
+    .news-card {
+
+      padding: 28px 22px;
+
+    }
+
+    .news-card h3 {
+
+      font-size: 17px;
+
+    }
+
+    .news-description {
+
+      font-size: 13px;
+
+    }
+
+    .news-gallery {
+
+      grid-template-columns: 1fr;
+
+    }
+
+    .closing-section {
+
+      padding: 60px 0 80px;
+
+    }
+
+  }
+
+</style>

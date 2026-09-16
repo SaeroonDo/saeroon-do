@@ -1,0 +1,589 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Contacto | Saeroon Do"
+  description="Contáctate con Saeroon Do Club de Taekwondo."
+>
+  <main class="main-content">
+    <!-- HERO SUPERIOR -->
+    <section class="page-hero">
+      <div class="hero-decoration"></div>
+
+      <div class="page-hero-content">
+
+        <div class="hero-text">
+          <p class="section-label">SAEROON DO</p>
+
+          <h1>
+            HABLEMOS DE
+            <span>TAEKWONDO</span>
+          </h1>
+
+          <p>
+            Estamos aquí para acompañarte en el primer paso de tu camino en Saeroon Do.
+          </p>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <img
+            src="/images/taekwondo2.jpg"
+            alt="Entrenamiento de Taekwondo Saeroon Do"
+            class="hero-interactive-img"
+          />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTRODUCCIÓN CON LÍNEA DORADA -->
+    <section class="content-intro">
+      <strong><p class="section-label">ESTAMOS PARA TI</p></strong>
+      <h2>COMIENZA TU <span>CAMINO</span></h2>
+      <div class="gold-line"></div>
+      <p class="intro-text">
+        Si quieres conocer nuestros grupos de entrenamiento, resolver alguna inquietud o simplemente saber más sobre Saeroon Do, estaremos felices de atenderte.
+      </p>
+    </section>
+
+    <!-- TARJETAS DE CONTACTO (ESTILO Y ESTRUCTURA RECURSOS) -->
+    <section class="cards-section">
+      <div class="cards-grid">
+        <article class="resource-card featured">
+          <div class="card-icon"><span>WA</span></div>
+          <strong><p class="card-label">ESCRÍBENOS</p></strong>
+          <h3>WHATSAPP</h3>
+          <p>Comunícate directamente con nosotros para recibir información sobre clases, horarios y procesos de inscripción.</p>
+          <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" class="card-button">
+            ESCRIBIR POR WHATSAPP <span>→</span>
+          </a>
+        </article>
+
+        <article class="resource-card">
+          <div class="card-icon"><span>01</span></div>
+          <strong><p class="card-label">VISÍTANOS</p></strong>
+          <h3>UBICACIÓN</h3>
+          <p>
+            Carrera 15 No. 4-68 Sur<br />
+            Barrio San Antonio de Padua<br />
+            Localidad Antonio Nariño
+          </p>
+          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="card-button">
+            VER UBICACIÓN <span>→</span>
+          </a>
+        </article>
+
+        <article class="resource-card">
+          <div class="card-icon"><span>@</span></div>
+          <strong><p class="card-label">ESCRÍBENOS</p></strong>
+          <h3>CORREO</h3>
+          <p>info@saeroondo.com</p>
+          <a href="mailto:info@saeroondo.com" class="card-button">
+            ENVIAR CORREO <span>→</span>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- FORMULARIO INTEGRADO EN CONTENEDOR TIPO RECURSOS -->
+    <section class="form-section">
+      <div class="form-card">
+        <div class="form-header">
+          <strong><p class="section-label">¿TIENES ALGUNA PREGUNTA?</p></strong>
+          <h2>HABLEMOS <span>CONTIGO</span></h2>
+          <p class="form-desc">Déjanos tus datos y tu mensaje. Nos pondremos en contacto contigo lo antes posible.</p>
+        </div>
+
+        <form class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <strong><label for="nombre">NOMBRE</label></strong>
+              <input id="nombre" type="text" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-group">
+             <strong><label for="telefono">TELÉFONO</label></strong> 
+              <input id="telefono" type="tel" placeholder="Tu teléfono" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <strong><label for="correo">CORREO ELECTRÓNICO</label></strong>
+            <input id="correo" type="email" placeholder="tu@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <strong><label for="mensaje">MENSAJE</label></strong>
+            <textarea id="mensaje" rows="4" placeholder="Cuéntanos cómo podemos ayudarte..." required></textarea>
+          </div>
+
+          <button type="submit" class="form-button">
+            ENVIAR MENSAJE <span>→</span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rock+Salt&display=swap');
+
+  .main-content {
+    background: #06191c;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* HERO SUPERIOR */
+  .page-hero {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    background:
+      radial-gradient(circle at 75% 35%, rgba(214, 165, 40, 0.28), transparent 22%),
+      linear-gradient(135deg, #06191c, #19393d 55%, #0b292d);
+    border-bottom: 1px solid rgba(214, 165, 40, 0.2);
+    overflow: hidden;
+  }
+
+  .page-hero::after {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    right: -200px;
+    bottom: -300px;
+    border-radius: 50%;
+    background: #d6a528;
+    opacity: 0.1;
+    filter: blur(60px);
+  }
+
+  .hero-decoration {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(3, 16, 19, 0.96),
+      rgba(3, 16, 19, 0.55),
+      rgba(3, 16, 19, 0.15)
+    );
+  }
+
+  .page-hero-content {
+    position: relative;
+    z-index: 5;
+    width: min(1400px, 94%);
+    margin: auto;
+    padding-top: 80px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .hero-text {
+    position: relative;
+    z-index: 5;
+  }
+
+  .section-label {
+    margin: 0 0 18px;
+    color: #d6a528;
+    font-family: 'Rock Salt', cursive;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .page-hero h1 {
+    max-width: 850px;
+    margin: 0;
+    font-family: 'Rock Salt', cursive;
+    font-size: clamp(30px, 4vw, 55px);
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  .page-hero h1 span {
+    display: block;
+    color: #d6a528;
+  }
+
+  .hero-text > p:last-child {
+    max-width: 620px;
+    margin-top: 25px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* IMAGEN INTEGRADA AL FONDO */
+  .hero-image-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .hero-image-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        90deg,
+        #06191c 0%,
+        rgba(6, 25, 28, 0.12) 18%,
+        rgba(6, 25, 28, 0) 45%,
+        rgba(6, 25, 28, 0.08) 72%,
+        #06191c 100%
+      ),
+      linear-gradient(
+        180deg,
+        #06191c 0%,
+        rgba(6, 25, 28, 0) 15%,
+        rgba(6, 25, 28, 0) 82%,
+        #06191c 100%
+      );
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .hero-interactive-img {
+    display: block;
+    width: 100%;
+    max-width: 540px;
+    height: auto;
+    object-fit: contain;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    filter:
+      brightness(0.9)
+      contrast(1.05)
+      drop-shadow(0 18px 30px rgba(0, 0, 0, 0.35));
+
+    -webkit-mask-image:
+      linear-gradient(
+        90deg,
+        transparent 0%,
+        #000 12%,
+        #000 88%,
+        transparent 100%
+      ),
+      linear-gradient(
+        180deg,
+        transparent 0%,
+        #000 10%,
+        #000 90%,
+        transparent 100%
+      );
+
+    -webkit-mask-composite: source-in;
+
+    mask-image:
+      linear-gradient(
+        90deg,
+        transparent 0%,
+        #000 12%,
+        #000 88%,
+        transparent 100%
+      ),
+      linear-gradient(
+        180deg,
+        transparent 0%,
+        #000 10%,
+        #000 90%,
+        transparent 100%
+      );
+
+    mask-composite: intersect;
+
+    transition:
+      transform 0.6s ease,
+      filter 0.6s ease;
+  }
+
+  .hero-image-wrapper:hover .hero-interactive-img {
+    transform: scale(1.035);
+
+    filter:
+      brightness(1)
+      contrast(1.08)
+      drop-shadow(0 22px 38px rgba(0, 0, 0, 0.45))
+      drop-shadow(0 0 18px rgba(214, 165, 40, 0.12));
+  }
+
+  /* INTRODUCCIÓN CON LÍNEA DORADA */
+  .content-intro {
+    width: min(900px, 90%);
+    margin: auto;
+    padding: 80px 0 40px;
+    text-align: center;
+  }
+
+  .content-intro h2 {
+    margin: 0;
+    font-family: 'Rock Salt', cursive;
+    font-size: clamp(28px, 3vw, 42px);
+    font-weight: 400;
+  }
+
+  .content-intro h2 span {
+    display: block;
+    color: #d6a528;
+  }
+
+  .gold-line {
+    width: 65px;
+    height: 4px;
+    margin: 22px auto;
+    background: #d6a528;
+  }
+
+  .intro-text {
+    max-width: 760px;
+    margin: auto;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* TARJETAS CON PATRÓN SIMÉTRICO */
+  .cards-section {
+    width: min(1200px, 92%);
+    margin: auto;
+    padding: 20px 0 80px;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  .resource-card {
+    position: relative;
+    min-height: 360px;
+    padding: 38px 30px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(145deg, rgba(19, 55, 59, 0.98), rgba(5, 29, 32, 0.98));
+    border: 1px solid rgba(214, 165, 40, 0.22);
+    border-radius: 12px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .resource-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(214, 165, 40, 0.55);
+  }
+
+  .resource-card.featured {
+    border-color: rgba(214, 165, 40, 0.45);
+    background: linear-gradient(145deg, rgba(28, 66, 69, 0.98), rgba(7, 32, 35, 0.98));
+  }
+
+  .card-icon {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(214, 165, 40, 0.5);
+    background: rgba(214, 165, 40, 0.08);
+    color: #d6a528;
+    border-radius: 50%;
+  }
+
+  .card-icon span {
+    font-family: 'Rock Salt', cursive;
+    font-size: 11px;
+  }
+
+  .card-label {
+    margin: 0 0 10px;
+    color: #d6a528;
+    font-family: 'Rock Salt', cursive;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .resource-card h3 {
+    margin: 0 0 18px;
+    font-family: 'Rock Salt', cursive;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .resource-card > p:not(.card-label) {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .card-button {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 17px;
+    background: #d6a528;
+    color: #06191c;
+    text-decoration: none;
+    font-family: 'Rock Salt', cursive;
+    font-size: 9px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .card-button:hover {
+    background: #e5b332;
+    transform: translateY(-2px);
+  }
+
+  /* FORMULARIO ESTILIZADO */
+  .form-section {
+    width: min(850px, 92%);
+    margin: auto;
+    padding: 20px 0 100px;
+  }
+
+  .form-card {
+    background: linear-gradient(145deg, rgba(19, 55, 59, 0.85), rgba(5, 29, 32, 0.95));
+    border: 1px solid rgba(214, 165, 40, 0.25);
+    border-radius: 12px;
+    padding: 45px 35px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+  }
+
+  .form-header {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  .form-header h2 {
+    margin: 0 0 15px;
+    font-family: 'Rock Salt', cursive;
+    font-size: clamp(26px, 3vw, 36px);
+  }
+
+  .form-header h2 span {
+    color: #d6a528;
+    display: block;
+  }
+
+  .form-desc {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #d6a528;
+    font-family: 'Rock Salt', cursive;
+    font-size: 9px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+    background: rgba(2, 11, 13, 0.55);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    box-sizing: border-box;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #d6a528;
+  }
+
+  .form-button {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background: #d6a528;
+    color: #06191c;
+    font-family: 'Rock Salt', cursive;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    margin-top: 10px;
+  }
+
+  .form-button:hover {
+    background: #e5b332;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 1100px) {
+    .cards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 750px) {
+    .page-hero {
+      min-height: auto;
+      padding: 80px 0 50px;
+    }
+
+    .page-hero-content {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding-top: 40px;
+    }
+
+    .hero-image-wrapper {
+      max-width: 480px;
+      margin-top: 10px;
+    }
+
+    .hero-interactive-img {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .form-card {
+      padding: 30px 20px;
+    }
+  }
+</style>
